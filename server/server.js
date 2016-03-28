@@ -1,5 +1,17 @@
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var webpack = require('webpack');
+var config = require('../client/webpack.config.js');
+
+// Compiler client bundle
+var compiler = webpack(config);
+compiler.watch({
+  aggregateTimeout: 300,
+   poll: true
+}, function (err, stats) {
+  if (err) throw err;
+  console.log(stats.toString());
+})
 
 var app = module.exports = loopback();
 
