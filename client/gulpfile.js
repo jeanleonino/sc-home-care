@@ -35,9 +35,11 @@ gulp.task('build:html', function() {
 
 // watch
 gulp.task('build:watch', function() {
-  $.watch(settings.paths.watch.js, ['build:js']);
-  $.watch(settings.paths.watch.css, ['build:css']);
-  $.watch(settings.paths.watch.html, ['build:html']);
+  $.watch(settings.paths.watch.js, function() {
+    gulp.start('build:js');
+  });
+  // $.watch(settings.paths.watch.css, ['build:css']);
+  // $.watch(settings.paths.watch.html, ['build:html']);
 });
 
 gulp.task('default', function(done) {

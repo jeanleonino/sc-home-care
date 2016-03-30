@@ -1,5 +1,5 @@
 (function() {
   'use strict';
 
-  console.log('Ola mundo!! ;D');
+  console.log('Ola mundo!! ;(');
 })();
