@@ -58,6 +58,7 @@ gulp.task('build:watch', function() {
   });
 });
 
+// default
 gulp.task('default', function(done) {
   runSequence('build:clean', ['build:js', 'build:css', 'build:html'], 'build:watch', done);
 });
