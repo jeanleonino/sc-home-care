@@ -1,12 +1,15 @@
 var path = require('path');
+var settings = require('./settings');
 
 module.exports = {
-    entry: path.join(__dirname, './src/app.js'),
+    entry: settings.paths.src.js,
     output: {
-      path: __dirname,
-      filename: './dist/app.js'
+      path: settings.paths.dist,
+      filename: 'app.js'
     },
     module: {
-        loaders: []
+        loaders: [
+           { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
+        ]
     }
 };
