@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
   paths: {
     src: {
-      js: path.join(__dirname, './src/app.js'),
+      js: path.join(__dirname, './src/index.js'),
       css: path.join(__dirname, './src/css/app.css'),
       html: path.join(__dirname, './src/index.html')
     },

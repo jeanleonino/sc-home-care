@@ -1,4 +1,3 @@
-var path = require('path');
 var settings = require('./settings');
 
 module.exports = {
