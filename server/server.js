@@ -1,6 +1,7 @@
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 var gulp = require('gulp');
+var settings = require('../client/settings');
 require('../client/gulpfile');
 
 gulp.start('default');

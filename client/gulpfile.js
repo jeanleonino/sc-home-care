@@ -3,7 +3,6 @@ var del = require('del');
 var gulp = require('gulp');
 var gulpLoadPlugins = require('gulp-load-plugins');
 var path = require('path');
-var postcss = require('postcss');
 var precss = require('precss');
 var runSequence = require('run-sequence');
 var webpack = require('webpack');
@@ -33,8 +32,8 @@ gulp.task('build:js', function(done) {
 gulp.task('build:css', function() {
   return gulp.src(settings.paths.src.css)
     .pipe($.sourcemaps.init())
-    .pipe(postcss(autoPrefixer, precss))
-    .pipe($.sourcemaps.write('.'))
+    .pipe($.postcss([autoPrefixer, precss]))
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest(settings.paths.dist));
 });
 
@@ -60,5 +59,5 @@ gulp.task('build:watch', function() {
 });
 
 gulp.task('default', function(done) {
-  runSequence('build:clean', ['build:js', 'build:css'], 'build:html', 'build:watch', done);
+  runSequence('build:clean', ['build:js', 'build:css', 'build:html'], 'build:watch', done);
 });
