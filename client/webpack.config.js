@@ -7,8 +7,14 @@ module.exports = {
       filename: 'app.js'
     },
     module: {
-        loaders: [
-           { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
-        ]
+      preLoaders: [
+        { test: /\.js$/, exclude: /node_modules/, loader: 'standard'}
+      ],
+      loaders: [
+        { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
+      ]
+    },
+    standard: {
+      parser: 'babel-eslint'
     }
 };
