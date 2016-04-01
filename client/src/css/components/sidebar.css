@@ -1,0 +1,14 @@
+/* Sidebar */
+
+.sidebar {
+  flex: 1 1 auto;
+  width: 100%;  
+}
+
+@media (min-width: $screen-size-tablet) {
+  .sidebar {
+    flex: 0 0 320px;
+    width: auto;
+    border: 1px solid $color-border;
+  }
+}
