@@ -3,10 +3,14 @@
 $screen-size-tablet: 768px;
 $screen-size-desktop: 1200px;
 
-$color-background: #FFFFFF;
-$color-base: #DCDCDD;
-$color-border: #C5C3C6;
-$color-accent: #1985A1;
-$color-font: #46494C;
+$white: #FFFFFF;
+
+$gray-100: #ECEDF2;
+$gray-200: #C5C3C6;
+$gray-300:#B2B3B7;
+$gray-700: #46494C;
+
+$blue: #396A92;
 
 $font-size-10: 1rem;
+$font-size-16: 1.6rem;

@@ -3,7 +3,9 @@ import {PropTypes} from 'react'
 import ReactEntity from 'react-entity'
 
 // Modules
-import {MALE, FEMALE} from 'repositories/constants'
+import constants from 'repositories/constants'
+
+const {MALE, FEMALE} = constants
 
 class SurveyEntity extends ReactEntity {
   static SCHEMA = {
