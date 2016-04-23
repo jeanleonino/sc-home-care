@@ -39,6 +39,9 @@ export default class Sidebar extends Component {
         <h1 className='logo'>{PROJECT_NAME}</h1>
         <div className='sidebar-tools'>
           <Filter />
+          <button className='button-add'>
+            <i className='icon-plus' />
+          </button>
         </div>
       </div>
     )

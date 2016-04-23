@@ -14,6 +14,15 @@
 
 .sidebar-tools {
   padding: 1rem;
+  display: flex;
+
+  .filter {
+    flex: 1 1 auto;
+  }
+
+  .button-add {
+    flex: 0 0 3rem;
+  }
 }
 
 .logo {
@@ -21,4 +30,21 @@
   text-transform: uppercase;
   text-align: center;
   margin: 2.5rem 0 1rem;
+  color: $gray-500;
+}
+
+.button-add {
+  margin-left: .5rem;
+  border: none;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  border-radius: .2rem;
+  outline: none;
+  background-color: $gray-50;
+  color: $gray-300;
+  transition: background-color ease .3s;
+
+  &:hover {
+    background-color: $gray-100;
+  }
 }

@@ -6,8 +6,10 @@ $screen-size-desktop: 1200px;
 $white: #FFFFFF;
 
 $gray-50:  #ECEFF1;
+$gray-100: #CFD8DC;
 $gray-200: #B0BEC5;
 $gray-300: #90A4AE;
+$gray-500: #607D8B;
 $gray-900: #263238;
 
 $blue-500: #3F51B5;
