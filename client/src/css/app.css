@@ -1,7 +1,8 @@
 /* global */
 
-@import "typography.css";
 @import "settings.css";
+@import "typography.css";
+@import "icons.css";
 @import "base.css";
 
 /* Components */

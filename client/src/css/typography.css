@@ -1,1 +1,36 @@
 /* typography */
+
+$font-fallback: sans-serif;
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('fonts/Roboto/Roboto-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('fonts/Roboto/Roboto-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('fonts/Roboto/Roboto-Medium.ttf');
+  font-weight: 500;
+}
+
+@define-mixin font-light $font-size {
+  font-family: 'Roboto Light', $font-fallback;
+  font-size: $font-size;
+}
+
+@define-mixin font-regular $font-size {
+  font-family: 'Roboto Regular', $font-fallback;
+  font-size: $font-size;
+}
+
+@define-mixin font-medium $font-size {
+  font-family: 'Roboto Medium', $font-fallback;
+  font-size: $font-size;
+}

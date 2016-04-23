@@ -8,6 +8,7 @@ body,
 }
 
 body {
+  @mixin font-regular $font-size-10;
   margin: 0;
   padding: 0;
 }

@@ -30,10 +30,10 @@ export default class Sidebar extends Component {
   }
 
   render () {
-    const {state: {surveys}} = this    
+    const {state: {surveys}} = this
     return (
       <div className='sidebar'>
-        <p>i am a sidebar</p>
+        <p>i am a sidebar <i className="icon-search"></i></p>
       </div>
     )
   }

@@ -18,8 +18,7 @@ class SurveyEntity extends ReactEntity {
       name: PropTypes.string,
       birth: PropTypes.number,
       gender: PropTypes.oneOf([MALE, FEMALE]),
-      address: PropTypes.string,
-      carers: PropTypes.arrayOf(PropTypes.string)
+      address: PropTypes.string
     })
   }
 }

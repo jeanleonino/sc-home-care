@@ -6,8 +6,8 @@
 
 @media (min-width: $screen-size-tablet) {
   .sidebar {
-    flex: 0 0 320px;
+    flex: 0 0 24rem;
     width: auto;
-    border-right: 1px solid $color-border;
+    border-right: .1rem solid $color-border;
   }
 }
