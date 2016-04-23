@@ -1,12 +1,25 @@
-import React, { Component } from 'react'
+// Core
+import React, {Component} from 'react'
+
+// Modules
+import Content from 'components/content'
+import Sidebar from 'components/sidebar'
 
 export default class Container extends Component {
 
+  constructor (props) {
+    super(props)
+    this.state = {
+      carerId: 1
+    }
+  }
+
   render () {
+    const {state: {carerId}} = this
     return (
       <div className='container'>
-        <div className='sidebar'></div>
-        <div className='content'></div>
+        <Sidebar carerId={carerId} />
+        <Content />
       </div>
     )
   }

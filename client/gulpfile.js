@@ -43,6 +43,12 @@ gulp.task('build:html', function() {
     .pipe(gulp.dest(settings.paths.dist));
 });
 
+// assets
+gulp.task('build:assets', function() {
+  return gulp.src(settings.paths.src.assets)
+    .pipe(gulp.dest(settings.paths.dist));
+});
+
 // watch
 gulp.task('build:watch', function() {
   $.watch(settings.paths.watch.js, function() {
@@ -60,5 +66,5 @@ gulp.task('build:watch', function() {
 
 // default
 gulp.task('default', function(done) {
-  runSequence('build:clean', ['build:js', 'build:css', 'build:html'], 'build:watch', done);
+  runSequence('build:clean', ['build:js', 'build:css', 'build:html', 'build:assets'], 'build:watch', done);
 });

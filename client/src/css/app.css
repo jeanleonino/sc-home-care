@@ -1,9 +1,6 @@
-/* externals */
-
-@import url(https://fonts.googleapis.com/css?family=Roboto);
-
 /* global */
 
+@import "typography.css";
 @import "settings.css";
 @import "base.css";
 
