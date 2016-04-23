@@ -2,6 +2,7 @@
 import React, {Component, PropTypes} from 'react'
 
 // Modules
+import Filter from 'components/filter'
 import surveyModel from 'models/survey'
 import constants from 'repositories/constants'
 
@@ -33,15 +34,11 @@ export default class Sidebar extends Component {
   }
 
   render () {
-    const {state: {surveys}} = this
     return (
       <div className='sidebar'>
-        <h1 className="logo">{PROJECT_NAME}</h1>
-        <div className="sidebar-tools">
-          <div className="filter">
-            <input className="filter-input" placeholder="Pesquisar formulários" type="text" />
-            <i className="filter-icon icon-search" />
-          </div>
+        <h1 className='logo'>{PROJECT_NAME}</h1>
+        <div className='sidebar-tools'>
+          <Filter />
         </div>
       </div>
     )

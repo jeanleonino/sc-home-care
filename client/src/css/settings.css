@@ -5,12 +5,12 @@ $screen-size-desktop: 1200px;
 
 $white: #FFFFFF;
 
-$gray-100: #ECEDF2;
-$gray-200: #C5C3C6;
-$gray-300:#B2B3B7;
-$gray-700: #46494C;
+$gray-50:  #ECEFF1;
+$gray-200: #B0BEC5;
+$gray-300: #90A4AE;
+$gray-900: #263238;
 
-$blue: #396A92;
+$blue-500: #3F51B5;
 
 $font-size-10: 1rem;
 $font-size-16: 1.6rem;

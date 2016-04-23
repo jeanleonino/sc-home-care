@@ -1,0 +1,36 @@
+/* Filter */
+
+.filter {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  background-color: $gray-50;
+  color: $gray-300;
+  border-radius: .2rem;
+}
+
+.filter-input {
+  width: 100%;
+  border: 0;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+  background: transparent;
+  height: 1.5rem;
+  color: $gray-300;
+
+  &::-webkit-input-placeholder {
+    color: $gray-200;
+  }
+}
+
+.filter-icon {
+  position: absolute;
+  margin: auto;
+  right: 1rem;
+  top: 0;
+  bottom: 0;
+  display: block;
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
