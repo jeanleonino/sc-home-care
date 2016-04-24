@@ -15,17 +15,14 @@ export default class Sidebar extends Component {
     super(props)
     this.state = {
       filter: '',
-      surveys: []
+      surveys: [],
+      selectedSurvey: undefined
     }
   }
 
   componentDidMount (props) {
     const {carerId} = this.props
     this._onLoad(carerId)
-  }
-
-  _onFilter = (value) => {
-    this.setState({filter: value})
   }
 
   _onLoad = (carerId) => {
@@ -39,6 +36,14 @@ export default class Sidebar extends Component {
     this.setState({surveys: surveys.concat(result)})
   }
 
+  _onFilter = (value) => {
+    this.setState({filter: value})
+  }
+
+  _onSelectSurvey = (survey) => {
+    this.setState({selectedSurvey: survey})
+  }
+
   _getFilteredSurveys = () => {
     const {surveys, filter} = this.state
     return surveys.filter((item) => {
@@ -48,6 +53,7 @@ export default class Sidebar extends Component {
   }
 
   render () {
+    const {selectedSurvey} = this.state
     const surveys = this._getFilteredSurveys()
     return (
       <div className='sidebar'>
@@ -58,7 +64,7 @@ export default class Sidebar extends Component {
             <i className='icon-plus' />
           </button>
         </div>
-        <List surveys={surveys} />
+        <List surveys={surveys} selectedSurvey={selectedSurvey} onSelectSurvey={this._onSelectSurvey} />
       </div>
     )
   }

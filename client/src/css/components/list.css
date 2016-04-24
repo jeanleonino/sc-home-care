@@ -20,4 +20,14 @@
     background-color: $blue-500;
     color: $gray-50;
   }
+
+  &.-active:after {
+    content: '';
+    position: absolute;
+    background-color: $blue-500;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: .5rem;
+  }
 }
