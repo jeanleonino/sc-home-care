@@ -5,8 +5,8 @@ import debounce from 'debounce'
 export default class Filter extends Component {
 
   _onKeyUp = (e) => {
-    const {onFilter} = this.props;
-    const value = e.target.value;
+    const {onFilter} = this.props
+    const value = e.target.value
     debounce(() => {
       onFilter(value)
     }, 700)()

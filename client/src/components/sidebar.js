@@ -48,7 +48,7 @@ export default class Sidebar extends Component {
   }
 
   render () {
-    const surveys = this._getFilteredSurveys();
+    const surveys = this._getFilteredSurveys()
     return (
       <div className='sidebar'>
         <h1 className='logo'>{PROJECT_NAME}</h1>
