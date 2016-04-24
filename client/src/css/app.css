@@ -1,6 +1,9 @@
+/* app */
+
 /* external */
 
 @import "../../../node_modules/normalize.css/normalize.css";
+@import "../../../node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.css";
 
 /* global */
 
@@ -9,9 +12,10 @@
 @import "icons.css";
 @import "base.css";
 
-/* Components */
+/* components */
 
 @import "components/container.css";
 @import "components/content.css";
 @import "components/sidebar.css";
 @import "components/filter.css";
+@import "components/list.css";

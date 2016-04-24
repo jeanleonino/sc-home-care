@@ -3,6 +3,7 @@ import React, {Component, PropTypes} from 'react'
 
 // Modules
 import Filter from 'components/filter'
+import List from 'components/list'
 import surveyModel from 'models/survey'
 import constants from 'repositories/constants'
 
@@ -34,6 +35,7 @@ export default class Sidebar extends Component {
   }
 
   render () {
+    const {surveys} = this.state
     return (
       <div className='sidebar'>
         <h1 className='logo'>{PROJECT_NAME}</h1>
@@ -43,6 +45,7 @@ export default class Sidebar extends Component {
             <i className='icon-plus' />
           </button>
         </div>
+        <List surveys={surveys} />
       </div>
     )
   }

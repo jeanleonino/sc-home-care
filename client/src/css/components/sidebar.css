@@ -1,7 +1,13 @@
-/* Sidebar */
+/* sidebar */
 
 .sidebar {
   flex: 0 1 100%;
+  display: flex;
+  flex-direction: column;
+
+  .list {
+    flex: 1 1 auto;
+  }
 }
 
 @media (min-width: $screen-size-tablet) {
@@ -15,6 +21,7 @@
 .sidebar-tools {
   padding: 1rem;
   display: flex;
+  margin-bottom: 1rem;
 
   .filter {
     flex: 1 1 auto;
@@ -39,7 +46,6 @@
   box-sizing: border-box;
   padding: 0 1rem;
   border-radius: .2rem;
-  outline: none;
   background-color: $gray-50;
   color: $gray-300;
   transition: background-color ease .3s;
