@@ -1,5 +1,5 @@
 // Core
-import React, {Component} from 'react'
+import React, {Component, PropTypes} from 'react'
 
 export default class Filter extends Component {
 
@@ -11,4 +11,8 @@ export default class Filter extends Component {
       </div>
     )
   }
+}
+
+Filter.propTypes = {
+  onFilter: PropTypes.func
 }

@@ -1,5 +1,6 @@
 // Core
 import React, {Component, PropTypes} from 'react'
+import debounce from 'debounce'
 
 // Modules
 import Filter from 'components/filter'
@@ -23,6 +24,12 @@ export default class Sidebar extends Component {
     this._onLoad(carerId)
   }
 
+  _onFilter = (value) => {
+    debounce((value) => {
+      console.log(value)
+    }, 500)
+  }
+
   _onLoad = (carerId) => {
     surveyModel
       .list(carerId)
@@ -40,7 +47,7 @@ export default class Sidebar extends Component {
       <div className='sidebar'>
         <h1 className='logo'>{PROJECT_NAME}</h1>
         <div className='sidebar-tools'>
-          <Filter />
+          <Filter onFilter={this._onFilter} />
           <button className='button-add'>
             <i className='icon-plus' />
           </button>
