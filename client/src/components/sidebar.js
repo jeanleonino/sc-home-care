@@ -1,6 +1,5 @@
 // Core
 import React, {Component, PropTypes} from 'react'
-import debounce from 'debounce'
 
 // Modules
 import Filter from 'components/filter'
@@ -15,6 +14,7 @@ export default class Sidebar extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      filter: '',
       surveys: []
     }
   }
@@ -25,9 +25,7 @@ export default class Sidebar extends Component {
   }
 
   _onFilter = (value) => {
-    debounce((value) => {
-      console.log(value)
-    }, 500)
+    this.setState({filter: value})
   }
 
   _onLoad = (carerId) => {
@@ -41,8 +39,16 @@ export default class Sidebar extends Component {
     this.setState({surveys: surveys.concat(result)})
   }
 
+  _getFilteredSurveys = () => {
+    const {surveys, filter} = this.state
+    return surveys.filter((item) => {
+      const patient = item.patient.name.toLowerCase()
+      return patient.includes(filter.toLowerCase())
+    })
+  }
+
   render () {
-    const {surveys} = this.state
+    const surveys = this._getFilteredSurveys();
     return (
       <div className='sidebar'>
         <h1 className='logo'>{PROJECT_NAME}</h1>
